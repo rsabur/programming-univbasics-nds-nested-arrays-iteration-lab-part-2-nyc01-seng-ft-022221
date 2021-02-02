@@ -4,8 +4,12 @@ def find_min_in_nested_arrays(src)
   count = 0
   smallest = []
   while count < src.length do
-    src[count].sort
-    smallest << src[count].sort.first
+    index = 0
+    while index < src[count].length do
+      if src[count][index] % 2 ==0
+        smallest << src[count][index]
+        index +=1
+    end
     count +=1
   end
   smallest
