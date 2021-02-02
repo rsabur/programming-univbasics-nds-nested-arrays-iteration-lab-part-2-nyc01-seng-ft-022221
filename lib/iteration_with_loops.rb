@@ -1,17 +1,17 @@
 def find_min_in_nested_arrays(src)
   # src will be an array of arrays of integers
   # Produce a new Array that contains the smallest number of each of the nested arrays
-  count = 0
+  outter_index = 0
   smallest = []
-  while count < src.length do
-    index = 0
+  while outter_index < src.count do
+    inner_index = 0
     low_number = 100
-    while index < src[count].length do
-      if src[count][index] < low_number
-        low_number = src[count][index]
-        index +=1
+    while index < src[outter_index].length do
+      if src[outter_index][inner_index] < low_number
+        low_number = src[outter_index][inner_index]
+        inner_index +=1
       end
-      count += 1
+      outter_index += 1
     end
   end
   smallest
