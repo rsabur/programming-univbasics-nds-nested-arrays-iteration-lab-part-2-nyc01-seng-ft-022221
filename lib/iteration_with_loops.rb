@@ -6,7 +6,7 @@ def find_min_in_nested_arrays(src)
   while count < src.length do
     index = 0
     while index < src[count].length do
-      if src[count][index].each_char { |min|  }
+      if src[count][index].collect.min
         smallest << src[count][index]
         index +=1
       end
