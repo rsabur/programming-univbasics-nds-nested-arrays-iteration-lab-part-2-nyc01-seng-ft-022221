@@ -9,8 +9,9 @@ def find_min_in_nested_arrays(src)
       if src[count][index] % 2 = 0
         smallest << src[count][index]
         index +=1
+      end
+      count += 1
     end
-    count +=1
   end
   smallest
 end
